@@ -1,0 +1,9 @@
+class RouteNames {
+  static String splashScreen = '/splashScreen';
+  static String signInScreen = '/signInScreen';
+  static String signUpScreen = '/signUpScreen';
+
+  static String mainNavBarScreen = '/mainNavBarScreen';
+  static String doctorListScreen = '/doctorListScreen';
+  static String appointmentScreen = '/appointmentScreen';
+}
