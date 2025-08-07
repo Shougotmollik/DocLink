@@ -1,6 +1,6 @@
 import 'package:doclink/controllers/home_controller.dart';
 import 'package:doclink/routes/route_names.dart';
-import 'package:doclink/views/home/widgets/carousel_view_widget.dart';
+import 'package:doclink/views/home/widgets/home_screen_banner_slider.dart';
 import 'package:doclink/views/home/widgets/categories_card.dart';
 import 'package:doclink/views/home/widgets/categories_section_widget.dart';
 import 'package:doclink/views/home/widgets/custom_home_app_bar.dart';

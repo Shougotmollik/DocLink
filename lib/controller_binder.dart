@@ -1,4 +1,5 @@
 import 'package:doclink/controllers/auth_controller.dart';
+import 'package:doclink/controllers/doctor_appointment_controller.dart';
 import 'package:doclink/controllers/home_controller.dart';
 import 'package:doclink/controllers/nav_bar_controller.dart';
 import 'package:doclink/controllers/profile_controller.dart';
@@ -11,5 +12,8 @@ class ControllerBinder extends Bindings {
     Get.lazyPut<NavBarController>(() => NavBarController());
     Get.lazyPut<ProfileController>(() => ProfileController());
     Get.lazyPut<HomeController>(() => HomeController());
+    Get.lazyPut<DoctorAppointmentController>(
+      () => DoctorAppointmentController(),
+    );
   }
 }

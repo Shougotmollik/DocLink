@@ -13,8 +13,12 @@ class DoctorCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     final size = MediaQuery.of(context).size;
+    void onTap() {
+      Get.toNamed(RouteNames.doctorDetailScreen, arguments: doctor);
+    }
+
     return InkWell(
-      onTap: () => Get.toNamed(RouteNames.appointmentScreen, arguments: doctor),
+      onTap: () => onTap(),
       child: Container(
         height: size.height * 0.22,
         width: double.infinity,
@@ -74,7 +78,7 @@ class DoctorCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: onTap,
                           child: const Text(
                             'Book',
                             style: TextStyle(
@@ -93,7 +97,7 @@ class DoctorCard extends StatelessWidget {
                             ),
                             const SizedBox(width: 4),
                             Text(
-                              '4.9',
+                              "${doctor.rating}",
                               style: textTheme.bodyMedium?.copyWith(
                                 color: AppColors.black,
                                 fontWeight: FontWeight.bold,
