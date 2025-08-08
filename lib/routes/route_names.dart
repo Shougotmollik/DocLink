@@ -9,4 +9,6 @@ class RouteNames {
   static String doctorDetailScreen = '/doctorDetailScreen';
   static String patientDetailScreen = '/patientDetailScreen';
   static String bookingDetailScreen = '/bookingDetailsScreen';
+
+  static String paymentMethodScreen = '/paymentMethodScreen';
 }

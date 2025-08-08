@@ -57,26 +57,31 @@ class PatientDetailsScreen extends StatelessWidget {
                 maxLines: 4,
                 controller: controller.patientProblemTEController,
               ),
-              const SizedBox(height: 48),
-              CustomElevatedButton(
-                btnText: 'Next',
-                onTap: () {
-                  if (controller.patientOnPress()) {
-                    final patient = controller.getPatientData();
-                    Get.toNamed(
-                      RouteNames.bookingDetailScreen,
-                      arguments: {
-                        'doctor': doctor,
-                        'patient': patient,
-                        'selectedDay': selectedDay,
-                        'selectedHour': selectedHour,
-                      },
-                    );
-                  }
-                },
-              ),
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32),
+        child: CustomElevatedButton(
+          btnText: 'Next',
+          onTap: () {
+            if (controller.patientOnPress()) {
+              final patient = controller.getPatientData();
+              Get.toNamed(
+                RouteNames.bookingDetailScreen,
+                arguments: {
+                  'doctor': doctor,
+                  'patient': patient,
+                  'selectedDay': selectedDay,
+                  'selectedHour': selectedHour,
+                },
+              );
+              controller.patientNameTEController.clear();
+              controller.patientAgeTEController.clear();
+              controller.patientProblemTEController.clear();
+            }
+          },
         ),
       ),
     );

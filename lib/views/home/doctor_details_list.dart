@@ -44,22 +44,24 @@ class DoctorDetailsScreen extends StatelessWidget {
               Text('Doctor’s Weekly Availability', style: textTheme.bodyLarge),
               const SizedBox(height: 8),
               AppointmentDayWidget(workingDays: doctor.workingDays),
-              const SizedBox(height: 78),
-              CustomElevatedButton(
-                btnText: 'Book an Appointment',
-                onTap: () {
-                  Get.toNamed(
-                    RouteNames.patientDetailScreen,
-                    arguments: {
-                      'doctor': doctor,
-                      'selectedDay': controller.selectedDay.value,
-                      'selectedHour': controller.selectedHour.value,
-                    },
-                  );
-                },
-              ),
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32),
+        child: CustomElevatedButton(
+          btnText: 'Book an Appointment',
+          onTap: () {
+            Get.toNamed(
+              RouteNames.patientDetailScreen,
+              arguments: {
+                'doctor': doctor,
+                'selectedDay': controller.selectedDay.value,
+                'selectedHour': controller.selectedHour.value,
+              },
+            );
+          },
         ),
       ),
     );

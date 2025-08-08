@@ -1,3 +1,4 @@
+import 'package:doclink/views/appointment/model/appointment_confirm_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:doclink/utils/ui_helper.dart';
@@ -8,6 +9,7 @@ class DoctorAppointmentController extends GetxController {
   final selectedHour = ''.obs;
   final selectedDay = ''.obs;
   final selectedGender = ''.obs;
+  var appointment = Rxn<AppointmentConfirmModel>();
 
   // TextEditingControllers for patient form
   final patientNameTEController = TextEditingController();
@@ -46,6 +48,13 @@ class DoctorAppointmentController extends GetxController {
     }
     return true;
   }
+
+  // for set confirm appointment
+  void setAppointment(AppointmentConfirmModel model) {
+    appointment.value = model;
+  }
+
+  AppointmentConfirmModel? get getAppointment => appointment.value;
 
   @override
   void onClose() {
