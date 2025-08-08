@@ -71,13 +71,26 @@ class DoctorDetailsFeatureCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                Text(
-                  doctor.specialization,
-                  style: textTheme.bodyMedium?.copyWith(
-                    color: Theme.of(context).primaryColor,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 18,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      doctor.specialization,
+                      style: textTheme.bodyMedium?.copyWith(
+                        color: Theme.of(context).primaryColor,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 18,
+                      ),
+                    ),
+                    Text(
+                      '${doctor.experience} yr exp',
+                      style: textTheme.bodyMedium?.copyWith(
+                        color: Theme.of(context).primaryColor,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

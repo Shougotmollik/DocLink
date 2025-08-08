@@ -1,3 +1,4 @@
+import 'package:doclink/theme/app_colors.dart';
 import 'package:doclink/widgets/confirm_dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -35,4 +36,18 @@ void showConfirmDialog({
   required VoidCallback onTap,
 }) {
   Get.dialog(ConfirmDialog(title: title, text: text, onTap: onTap));
+}
+
+//* snack bar
+void showSnackBar(String title, String message) {
+  Get.snackbar(
+    title,
+    message,
+    snackPosition: SnackPosition.BOTTOM,
+    colorText: AppColors.onError,
+    backgroundColor: AppColors.error,
+    padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+    snackStyle: SnackStyle.GROUNDED,
+    margin: const EdgeInsets.all(0.0),
+  );
 }

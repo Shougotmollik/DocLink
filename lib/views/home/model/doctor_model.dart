@@ -5,6 +5,7 @@ class DoctorModel {
   final String imagePath;
   final double rating;
   final double fees;
+  final double experience;
   final List<String> workingHours;
   final List<String> workingDays;
 
@@ -15,6 +16,7 @@ class DoctorModel {
     required this.imagePath,
     required this.rating,
     required this.fees,
+    required this.experience,
     required this.workingHours,
     required this.workingDays,
   });

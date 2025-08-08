@@ -7,4 +7,6 @@ class RouteNames {
   static String doctorListScreen = '/doctorListScreen';
   static String appointmentScreen = '/appointmentScreen';
   static String doctorDetailScreen = '/doctorDetailScreen';
+  static String patientDetailScreen = '/patientDetailScreen';
+  static String bookingDetailScreen = '/bookingDetailsScreen';
 }

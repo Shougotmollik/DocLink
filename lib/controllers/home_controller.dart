@@ -31,6 +31,7 @@ class HomeController extends GetxController {
         '01:00 PM',
         '02:00 PM',
       ],
+      experience: 7,
     ),
     DoctorModel(
       name: 'Dr. Ayesha Rahman',
@@ -42,6 +43,7 @@ class HomeController extends GetxController {
       fees: 100,
       workingDays: ['Tuesday', 'Thursday'],
       workingHours: ['09:00 AM', '10:00 AM', '11:00 AM', '12:00 PM'],
+      experience: 5,
     ),
     DoctorModel(
       name: 'Dr. Shuvo Chatterjee',
@@ -53,6 +55,7 @@ class HomeController extends GetxController {
       fees: 90,
       workingDays: ['Monday', 'Wednesday', 'Saturday'],
       workingHours: ['10:00 AM', '11:00 AM', '12:00 PM', '01:00 PM'],
+      experience: 3,
     ),
     DoctorModel(
       name: 'Dr. Nusrat Islam',
@@ -64,6 +67,7 @@ class HomeController extends GetxController {
       fees: 110,
       workingDays: ['Tuesday', 'Thursday'],
       workingHours: ['11:00 AM', '12:00 PM', '01:00 PM', '02:00 PM'],
+      experience: 7,
     ),
     DoctorModel(
       name: 'Dr. Rahat Hossain',
@@ -75,6 +79,7 @@ class HomeController extends GetxController {
       fees: 130,
       workingDays: ['Wednesday', 'Friday'],
       workingHours: ['10:00 AM', '11:00 AM', '12:00 PM', '01:00 PM'],
+      experience: 2,
     ),
     DoctorModel(
       name: 'Dr. Mehedi Hasan',
@@ -86,6 +91,7 @@ class HomeController extends GetxController {
       fees: 115,
       workingDays: ['Monday', 'Thursday'],
       workingHours: ['09:00 AM', '10:00 AM', '11:00 AM', '12:00 PM'],
+      experience: 6,
     ),
   ];
 

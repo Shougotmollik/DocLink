@@ -1,3 +1,5 @@
+import 'package:doclink/controllers/doctor_appointment_controller.dart';
+import 'package:doclink/routes/route_names.dart';
 import 'package:doclink/views/home/model/doctor_model.dart';
 import 'package:doclink/views/home/widgets/appointment_days_widgets.dart';
 import 'package:doclink/views/home/widgets/doctor_details_feature_widget.dart';
@@ -13,6 +15,8 @@ class DoctorDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final doctor = Get.arguments as DoctorModel;
+    final DoctorAppointmentController controller =
+        Get.find<DoctorAppointmentController>();
 
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
@@ -39,11 +43,20 @@ class DoctorDetailsScreen extends StatelessWidget {
               const SizedBox(height: 24),
               Text('Doctor’s Weekly Availability', style: textTheme.bodyLarge),
               const SizedBox(height: 8),
-              AppointmentDaysWidget(doctor: doctor),
+              AppointmentDayWidget(workingDays: doctor.workingDays),
               const SizedBox(height: 78),
               CustomElevatedButton(
                 btnText: 'Book an Appointment',
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(
+                    RouteNames.patientDetailScreen,
+                    arguments: {
+                      'doctor': doctor,
+                      'selectedDay': controller.selectedDay.value,
+                      'selectedHour': controller.selectedHour.value,
+                    },
+                  );
+                },
               ),
             ],
           ),

@@ -1,6 +1,8 @@
 import 'package:doclink/controller_binder.dart';
 import 'package:doclink/routes/route_names.dart';
 import 'package:doclink/views/appointment/appointment_screen.dart';
+import 'package:doclink/views/appointment/booking_details_screen.dart';
+import 'package:doclink/views/appointment/patient_details_screen.dart';
 import 'package:doclink/views/auth/sign_in_screen.dart';
 import 'package:doclink/views/auth/sign_up_screen.dart';
 import 'package:doclink/views/auth/splash_screen.dart';
@@ -45,6 +47,18 @@ class AppRoutes {
     GetPage(
       name: RouteNames.doctorDetailScreen,
       page: () => const DoctorDetailsScreen(),
+      transition: Transition.rightToLeft,
+      binding: ControllerBinder(),
+    ),
+    GetPage(
+      name: RouteNames.patientDetailScreen,
+      page: () => const PatientDetailsScreen(),
+      transition: Transition.rightToLeft,
+      binding: ControllerBinder(),
+    ),
+    GetPage(
+      name: RouteNames.bookingDetailScreen,
+      page: () => const BookingDetailsScreen(),
       transition: Transition.rightToLeft,
       binding: ControllerBinder(),
     ),
