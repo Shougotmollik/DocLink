@@ -71,7 +71,7 @@ It allows patients to **search for doctors**, **view profiles**, and **book appo
 ---
 
 ## 🎨 UI/UX Design
-Figma Prototype: [🔗 View Design](https://www.figma.com/design/I3MOl0fAx4SmJnAwhSRQoC/Doctor-Appointment-Case-Study--for-Final-Year-Project?node-id=3-3&p=f&t=dEBbL0sD0a1Cyy1R-0)
+Figma Prototype: [🔗 View Design](https://www.figma.com/)
 
 ---
 
