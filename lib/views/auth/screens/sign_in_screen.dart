@@ -12,7 +12,7 @@ import 'package:doclink/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'widgets/social_button_widget.dart';
+import '../widgets/social_button_widget.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});

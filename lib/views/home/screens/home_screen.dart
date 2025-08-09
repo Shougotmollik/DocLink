@@ -1,11 +1,11 @@
 import 'package:doclink/controllers/home_controller.dart';
-import 'package:doclink/routes/route_names.dart';
+import 'package:doclink/controllers/nav_bar_controller.dart';
 import 'package:doclink/views/home/widgets/home_screen_banner_slider.dart';
 import 'package:doclink/views/home/widgets/categories_card.dart';
 import 'package:doclink/views/home/widgets/categories_section_widget.dart';
 import 'package:doclink/views/home/widgets/custom_home_app_bar.dart';
 import 'package:doclink/views/home/widgets/custom_search_bar.dart';
-import 'package:doclink/views/home/widgets/doctor_card.dart';
+import 'package:doclink/views/doctor/widgets/doctor_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,6 +16,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final HomeController controller = Get.find<HomeController>();
+    final NavBarController navBarController = Get.find<NavBarController>();
     return Scaffold(
       appBar: const CustomHomeAppBar(),
       body: Padding(
@@ -32,10 +33,7 @@ class HomeScreen extends StatelessWidget {
               CategoriesSectionWidget(
                 titleText: 'All Doctors',
                 onTap: () {
-                  Get.toNamed(
-                    RouteNames.doctorListScreen,
-                    arguments: controller.doctorList,
-                  );
+                  navBarController.doctorScreen();
                 },
               ),
               _buildDoctorListSection(controller),

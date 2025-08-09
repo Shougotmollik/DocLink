@@ -82,7 +82,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
   }
 
   void _signUpButton() {
-    formValidator.validateAndProceed(_formKey, () {});
+    formValidator.validateAndProceed(_formKey, () {
+      Get.offAllNamed(RouteNames.signInScreen);
+    });
   }
 
   Widget _buildSocialLoginSection() {

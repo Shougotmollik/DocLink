@@ -1,6 +1,6 @@
 import 'package:doclink/theme/app_colors.dart';
 import 'package:doclink/views/home/model/doctor_model.dart';
-import 'package:doclink/views/home/widgets/icon_button.dart';
+import 'package:doclink/views/doctor/widgets/icon_button.dart';
 import 'package:flutter/material.dart';
 
 class DoctorDetailsFeatureCard extends StatelessWidget {

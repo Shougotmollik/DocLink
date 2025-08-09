@@ -1,16 +1,16 @@
 import 'package:doclink/controller_binder.dart';
 import 'package:doclink/routes/route_names.dart';
-import 'package:doclink/views/appointment/appointment_screen.dart';
-import 'package:doclink/views/appointment/booking_details_screen.dart';
-import 'package:doclink/views/appointment/patient_details_screen.dart';
-import 'package:doclink/views/auth/sign_in_screen.dart';
-import 'package:doclink/views/auth/sign_up_screen.dart';
-import 'package:doclink/views/auth/splash_screen.dart';
-import 'package:doclink/views/home/doctor_details_list.dart';
-import 'package:doclink/views/home/doctor_list_screen.dart';
+import 'package:doclink/views/appointment/screens/appointment_screen.dart';
+import 'package:doclink/views/appointment/screens/booking_details_screen.dart';
+import 'package:doclink/views/appointment/screens/patient_details_screen.dart';
+import 'package:doclink/views/auth/screens/sign_in_screen.dart';
+import 'package:doclink/views/auth/screens/sign_up_screen.dart';
+import 'package:doclink/views/auth/screens/splash_screen.dart';
+import 'package:doclink/views/doctor/screens/doctor_details_screen.dart';
+import 'package:doclink/views/doctor/screens/doctor_list_screen.dart';
 import 'package:doclink/views/main_nav_bar/main_nav_bar_screen.dart';
-import 'package:doclink/views/notifications/notification_screen.dart';
-import 'package:doclink/views/payment/payment_method_screen.dart';
+import 'package:doclink/views/notifications/screens/notification_screen.dart';
+import 'package:doclink/views/payment/screens/payment_method_screen.dart';
 import 'package:get/get.dart';
 
 class AppRoutes {
@@ -42,7 +42,7 @@ class AppRoutes {
     ),
     GetPage(
       name: RouteNames.doctorListScreen,
-      page: () => const DoctorListScreen(),
+      page: () => const DoctorScreen(),
       transition: Transition.rightToLeft,
       binding: ControllerBinder(),
     ),

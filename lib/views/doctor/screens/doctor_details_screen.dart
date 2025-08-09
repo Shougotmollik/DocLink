@@ -1,9 +1,9 @@
 import 'package:doclink/controllers/doctor_appointment_controller.dart';
 import 'package:doclink/routes/route_names.dart';
 import 'package:doclink/views/home/model/doctor_model.dart';
-import 'package:doclink/views/home/widgets/appointment_days_widgets.dart';
-import 'package:doclink/views/home/widgets/doctor_details_feature_widget.dart';
-import 'package:doclink/views/home/widgets/appointment_hour_widget.dart';
+import 'package:doclink/views/doctor/widgets/appointment_days_widgets.dart';
+import 'package:doclink/views/doctor/widgets/doctor_details_feature_widget.dart';
+import 'package:doclink/views/doctor/widgets/appointment_hour_widget.dart';
 import 'package:doclink/widgets/custom_app_bar.dart';
 import 'package:doclink/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';

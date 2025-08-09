@@ -1,8 +1,8 @@
 import 'package:doclink/routes/route_names.dart';
-import 'package:doclink/views/appointment/appointment_screen.dart';
-import 'package:doclink/views/home/home_screen.dart';
-import 'package:doclink/views/message/message_screen.dart';
-import 'package:doclink/views/profile/profile_screen.dart';
+import 'package:doclink/views/appointment/screens/appointment_screen.dart';
+import 'package:doclink/views/doctor/screens/doctor_list_screen.dart';
+import 'package:doclink/views/home/screens/home_screen.dart';
+import 'package:doclink/views/profile/screens/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
@@ -11,8 +11,8 @@ class NavBarController extends GetxController {
 
   final List<Widget> screens = const [
     HomeScreen(),
+    DoctorScreen(),
     AppointmentScreen(),
-    MessageScreen(),
     ProfileScreen(),
   ];
 
@@ -26,7 +26,7 @@ class NavBarController extends GetxController {
     currentIndex.value = 0;
   }
 
-  void backToProfileScreen() {
-    currentIndex.value = 4;
+  void doctorScreen() {
+    currentIndex.value = 1;
   }
 }

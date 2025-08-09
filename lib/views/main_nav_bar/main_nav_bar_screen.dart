@@ -46,6 +46,7 @@ class _MainNavBarScreenState extends State<MainNavBarScreen> {
               child: Wrap(
                 children: [
                   NavigationBar(
+                    height: kToolbarHeight,
                     selectedIndex: controller.currentIndex.value,
                     onDestinationSelected: controller.updateIndex,
                     animationDuration: const Duration(milliseconds: 500),
@@ -64,14 +65,17 @@ class _MainNavBarScreenState extends State<MainNavBarScreen> {
                         label: 'Home',
                       ),
                       NavigationDestination(
+                        icon: Icon(Icons.medical_services_outlined, size: 28),
+                        selectedIcon: Icon(
+                          Icons.medical_services_rounded,
+                          size: 28,
+                        ),
+                        label: 'Doctor',
+                      ),
+                      NavigationDestination(
                         icon: Icon(Icons.calendar_month_outlined, size: 28),
                         selectedIcon: Icon(Icons.calendar_month, size: 28),
                         label: 'Appointment',
-                      ),
-                      NavigationDestination(
-                        icon: Icon(Icons.message_outlined, size: 28),
-                        selectedIcon: Icon(Icons.message_rounded, size: 28),
-                        label: 'Message',
                       ),
                       NavigationDestination(
                         icon: Icon(Icons.person_2, size: 28),
