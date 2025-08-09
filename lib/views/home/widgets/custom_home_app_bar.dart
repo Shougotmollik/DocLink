@@ -1,6 +1,8 @@
+import 'package:doclink/routes/route_names.dart';
 import 'package:doclink/utils/app_assets.dart';
 import 'package:doclink/widgets/custom_circle_avatar.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CustomHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomHomeAppBar({super.key});
@@ -21,7 +23,9 @@ class CustomHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
         subtitle: const Text('Shougot Mollik'),
         subtitleTextStyle: textTheme.bodyLarge?.copyWith(fontSize: 18),
         trailing: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed(RouteNames.notificationScreen);
+          },
           icon: const Icon(Icons.notifications_none_outlined),
         ),
       ),

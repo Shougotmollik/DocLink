@@ -9,6 +9,7 @@ import 'package:doclink/views/auth/splash_screen.dart';
 import 'package:doclink/views/home/doctor_details_list.dart';
 import 'package:doclink/views/home/doctor_list_screen.dart';
 import 'package:doclink/views/main_nav_bar/main_nav_bar_screen.dart';
+import 'package:doclink/views/notifications/notification_screen.dart';
 import 'package:doclink/views/payment/payment_method_screen.dart';
 import 'package:get/get.dart';
 
@@ -30,6 +31,12 @@ class AppRoutes {
     GetPage(
       name: RouteNames.mainNavBarScreen,
       page: () => const MainNavBarScreen(),
+      transition: Transition.fadeIn,
+      binding: ControllerBinder(),
+    ),
+    GetPage(
+      name: RouteNames.notificationScreen,
+      page: () => const NotificationScreen(),
       transition: Transition.fadeIn,
       binding: ControllerBinder(),
     ),
