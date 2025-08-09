@@ -18,9 +18,8 @@ It allows patients to **search for doctors**, **view profiles**, and **book appo
 6. [Installation](#-installation)
 7. [Project Structure](#-project-structure)
 8. [Firebase Setup](#-firebase-setup)
-9. [Screenshots](#-screenshots)
+9. [Contributing](#-contributing)
 10. [License](#-license)
-11. [Contributing](#-contributing)
 
 ---
 
@@ -38,15 +37,15 @@ It allows patients to **search for doctors**, **view profiles**, and **book appo
 
 ## 🛠 Tech Stack
 
-| Component            | Technology |
-|----------------------|------------|
-| **Frontend**         | Flutter (Dart) |
-| **State Management** | GetX |
-| **Authentication**   | Firebase Auth |
-| **Database**         | Firebase Firestore |
-| **Cloud Storage**    | Firebase Storage |
+| Component              | Technology |
+|------------------------|------------|
+| **Frontend**           | Flutter (Dart) |
+| **State Management**   | GetX |
+| **Authentication**     | Firebase Auth |
+| **Database**           | Firebase Firestore |
+| **Cloud Storage**      | Firebase Storage |
 | **Push Notifications** | Firebase Cloud Messaging |
-| **UI/UX Design**     | Figma |
+| **UI/UX Design**       | Figma |
 | **Maps API** *(optional)* | Google Maps API |
 
 ---
@@ -75,56 +74,72 @@ It allows patients to **search for doctors**, **view profiles**, and **book appo
 Figma Prototype: [🔗 View Design](https://www.figma.com/design/I3MOl0fAx4SmJnAwhSRQoC/Doctor-Appointment-Case-Study--for-Final-Year-Project?node-id=3-3&p=f&t=dEBbL0sD0a1Cyy1R-0)
 
 ---
+
 ## 📦 Installation
 
-    # Clone the repository
-    git clone https://github.com/Shougotmollik/DocLink.git
-    
-    # Navigate into the project folder
-    cd DocLink
-    
-    # Install dependencies
-    flutter pub get
-    
-    # Run the app
-    flutter run
+```bash
+# Clone the repository
+git clone https://github.com/Shougotmollik/DocLink.git
+
+# Navigate into the project folder
+cd DocLink
+
+# Install dependencies
+flutter pub get
+
+# Run the app
+flutter run
+```
+
+---
 
 ## 📂 Project Structure
 
-      DocLink/
-      │── android/               # Android native files
-      │── ios/                   # iOS native files
-      │── lib/                   # Flutter source code
-      │   ├── controllers/       # GetX controllers
-      │   ├── models/            # Data models
-      │   ├── services/          # Firebase & API services
-      │   ├── views/             # UI screens
-      │   ├── widgets/           # Reusable UI components
-      │   └── main.dart          # App entry point
-      │── pubspec.yaml           # Flutter dependencies
-      │── README.md              # Project documentation
-      
-## 🔥Firebase Setup
-    1.Create a new project in Firebase Console.
-    2.Enable Authentication → Email/Password method.
-    3.Set up Cloud Firestore with required collections:
-    4.doctors — doctor profiles & specialties
-    5.appointments — booked appointment data
-    6.Enable Firebase Storage for profile images.
-    7.Download:
-        google-services.json → android/app/
-        
-        GoogleService-Info.plist → ios/Runner/
-        
-        (Optional) Configure Firebase Cloud Messaging for push notifications.
+```
+DocLink/
+│── android/               # Android native files
+│── ios/                   # iOS native files
+│── lib/                   # Flutter source code
+│   ├── controllers/       # GetX controllers
+│   ├── models/            # Data models
+│   ├── services/          # Firebase & API services
+│   ├── views/             # UI screens
+│   ├── widgets/           # Reusable UI components
+│   └── main.dart          # App entry point
+│── pubspec.yaml           # Flutter dependencies
+│── README.md              # Project documentation
+```
+
+---
+
+## 🔥 Firebase Setup
+
+1. Create a new project in **[Firebase Console](https://console.firebase.google.com/)**.
+2. Enable **Authentication** → Email/Password method.
+3. Set up **Cloud Firestore** with collections:
+   - `doctors` — doctor profiles & specialties
+   - `appointments` — booked appointment data
+4. Enable **Firebase Storage** for profile images.
+5. Download config files:
+   - `google-services.json` → `android/app/`
+   - `GoogleService-Info.plist` → `ios/Runner/`
+6. *(Optional)* Configure **Firebase Cloud Messaging** for push notifications.
+
+---
 
 ## 🤝 Contributing
-    Fork the repository
-    
-    Create a new branch (feature/your-feature)
-    
-    Commit your changes
-    
-    Push to your fork
-    
-    Open a Pull Request
+
+1. **Fork** the repository  
+2. Create a **new branch** (`feature/your-feature`)  
+3. **Commit** your changes  
+4. **Push** to your fork  
+5. Open a **Pull Request**
+
+---
+
+## 📜 License
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+> 💡 *DocLink makes healthcare more accessible, one appointment at a time.*
