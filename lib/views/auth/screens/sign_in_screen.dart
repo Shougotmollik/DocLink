@@ -62,7 +62,14 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
                 ForgetPasswordButton(btnText: "Forget Password?", onTap: () {}),
                 const SizedBox(height: 28),
-                CustomElevatedButton(btnText: 'Sign In', onTap: _signInButton),
+                Obx(
+                  () => CustomElevatedButton(
+                    btnText: controller.loginLoading.value
+                        ? 'Loading...'
+                        : 'Sign In',
+                    onTap: _signInButton,
+                  ),
+                ),
                 const SizedBox(height: 18),
                 const DeviderTextWidget(),
                 const SizedBox(height: 18),
@@ -79,7 +86,10 @@ class _SignInScreenState extends State<SignInScreen> {
 
   void _signInButton() {
     formValidator.validateAndProceed(_formKey, () {
-      Get.offAllNamed(RouteNames.mainNavBarScreen);
+      controller.userLogin(
+        email: controller.emailTEController.text.trim(),
+        password: controller.passwordTEController.text,
+      );
     });
   }
 

@@ -39,15 +39,17 @@ void showConfirmDialog({
 }
 
 //* snack bar
-void showSnackBar(String title, String message) {
+void showSnackBar(String title, String message, {bool isError = false}) {
   Get.snackbar(
     title,
     message,
     snackPosition: SnackPosition.BOTTOM,
-    colorText: AppColors.onError,
-    backgroundColor: AppColors.error,
-    padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-    snackStyle: SnackStyle.GROUNDED,
-    margin: const EdgeInsets.all(0.0),
+    colorText: Colors.white,
+    backgroundColor: isError ? AppColors.error : AppColors.success,
+    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+    snackStyle: SnackStyle.FLOATING,
+    margin: const EdgeInsets.all(10),
+    duration: const Duration(seconds: 3),
+    icon: Icon(isError ? Icons.error : Icons.check_circle, color: Colors.white),
   );
 }

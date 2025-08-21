@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "567914156523",
+    "project_id": "doclink-488e7",
+    "storage_bucket": "doclink-488e7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567914156523:android:e7b46a98616454e63649ae",
+        "android_client_info": {
+          "package_name": "com.shogot.doclink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhZZGNG8qthcs0fKDM75C1hEun57cp-qY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

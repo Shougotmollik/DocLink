@@ -69,7 +69,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   validator: formValidator.validateMobile,
                 ),
                 const SizedBox(height: 14),
-                CustomElevatedButton(btnText: 'Sign Up', onTap: _signUpButton),
+                Obx(
+                  () => CustomElevatedButton(
+                    btnText: controller.regiLoading.value
+                        ? 'Loading...'
+                        : 'Sign Up',
+                    onTap: _signUpButton,
+                  ),
+                ),
                 const DeviderTextWidget(),
                 _buildSocialLoginSection(),
                 _buildSignInSection(),
@@ -83,7 +90,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   void _signUpButton() {
     formValidator.validateAndProceed(_formKey, () {
-      Get.offAllNamed(RouteNames.signInScreen);
+      controller.userRegistration(
+        name: controller.nameTEController.text.trim(),
+        email: controller.emailTEController.text.trim(),
+        password: controller.passwordTEController.text,
+        mobile: controller.mobileTEController.text.trim(),
+      );
     });
   }
 
